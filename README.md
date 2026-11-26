@@ -1,9 +1,14 @@
-﻿# RL-Based Adaptive Battery Management for UAVs
+
+# RL-Based Adaptive Battery Management for UAVs
+
+UAV Reinforcement Learning Based Battery Management System
 
 ## Overview
+
 This project focuses on Reinforcement Learning based adaptive battery management for Unmanned Aerial Vehicles (UAVs).
 
 ## Team
+
 - Laxmi
 - Nikita
 - Deva
@@ -11,6 +16,7 @@ This project focuses on Reinforcement Learning based adaptive battery management
 - Yash Raj
 
 ## Folder Structure
+
 - env: Battery management environment
 - app: Streamlit demo application
 - eval: Model evaluation and plots
@@ -24,22 +30,31 @@ This project focuses on Reinforcement Learning based adaptive battery management
 - tests: Unit tests
 
 ## Setup
+
 Install Python dependencies using:
 
+```bash
 pip install -r requirements.txt
+```
 
 ## How to Run
+
 Training, evaluation and demo instructions will be added.
 
 ## Results
+
 Experimental results will be added.
 
 ## Reproducibility
+
 Random seeds and environment version details will be documented.
 
 ## Demo
+
 Project demo link will be added.
 
 ## Contributing
+
 Each team member should work on a separate branch.
+
 Changes should be submitted through Pull Requests and reviewed before merging into main.
