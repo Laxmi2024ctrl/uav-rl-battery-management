@@ -1,0 +1,49 @@
+\subsection{Experimental Setup}
+\label{sec:setup}
+
+\subsubsection{Environment}
+We use the frozen environment \texttt{env-v1}, which integrates the rotary-wing power model, the battery model (SoC, Peukert effect, 1-RC Thevenin, thermal, degradation) and the reward function.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Environment parameters.}
+\label{tab:env_params}
+\begin{tabular}{lll}
+\hline
+Parameter & Value & Unit \\
+\hline
+UAV mass & TODO & kg \\
+Payload & TODO & kg \\
+Battery capacity & TODO & Wh \\
+Wind range & TODO & m/s \\
+Discount factor $\gamma$ & 0.99 & -- \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Training Protocol}
+All agents are implemented with Stable-Baselines3 \cite{raffin2021sb3} on a Gymnasium \cite{towers2024gymnasium} environment. Each algorithm is trained with seeds 0, 1 and 2, and training is logged with the SB3 \texttt{Monitor} wrapper.
+
+\subsubsection{Evaluation Protocol}
+Every method is evaluated with the common script \texttt{evaluate.py} over 100 episodes with seeds 1000--1099. Results are reported as mean $\pm$ standard deviation over the three training seeds.
+
+\subsubsection{Hyperparameters}
+\begin{table}[t]
+\centering
+\small
+\caption{Hyperparameters per algorithm.}
+\label{tab:hyperparams}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\hline
+Parameter & DQN & PPO & SAC & TD3 \\
+\hline
+Total steps & 300K & 500K & TODO & TODO \\
+Learning rate & TODO & TODO & TODO & TODO \\
+Batch size & TODO & TODO & TODO & TODO \\
+Network size & TODO & TODO & TODO & TODO \\
+$\gamma$ & 0.99 & 0.99 & 0.99 & 0.99 \\
+\hline
+\end{tabular}}
+\end{table}
