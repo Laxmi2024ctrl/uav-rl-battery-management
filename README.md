@@ -70,6 +70,7 @@ uav-rl-battery-management/
 ## 4. Installation
 
 Requirements: Python 3.10 or higher, git.
+Dependencies are listed in `requirements.txt` with pinned versions (Gymnasium, Stable-Baselines3, PyTorch, NumPy, Pandas, Matplotlib, SciPy, Streamlit, pytest). Installing them may take a few minutes because PyTorch is a large package.
 
 ```bash
 # 1. Clone the repository
