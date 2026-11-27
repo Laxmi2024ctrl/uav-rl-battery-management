@@ -8,3 +8,11 @@ __pycache__/
 .env
 .env.*
 !.env.example
+.venv/
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
