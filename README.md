@@ -2,6 +2,8 @@
 
 Reinforcement learning for adaptive speed and battery management of rotary-wing Unmanned Aerial Vehicles (UAVs), comparing DQN, PPO, SAC and TD3 against rule-based baselines.
 
+> **Status:** Work in progress. Code, results and some report values (marked TODO) will be added soon.
+
 ## Table of Contents
 
 1. [Overview](#1-overview)
@@ -130,7 +132,7 @@ pdflatex main
 | SAC / TD3 | continuous env |
 | Logging | SB3 Monitor wrapper, `logs/<algo>/seed_X/` |
 | Model files | `models/<algo>_seedX.zip` |
-| Environment version | env-v1 (frozen after Day 4) |
+| Environment version | env-v1 (frozen) |
 
 Generalization tests: wind +/- 8 m/s, payload 1-1.5 kg.
 
@@ -155,8 +157,6 @@ streamlit run app/app.py
 
 The demo provides sidebar controls (agent, wind, payload, seed), the UAV trajectory, live SoC / temperature / speed plots, and RL vs best-baseline side by side.
 
-Screenshots are in `figures/`.
-
 ## 9. Reproducibility
 
 - All training uses seeds 0, 1, 2; evaluation uses seeds 1000-1099
@@ -177,13 +177,8 @@ Screenshots are in `figures/`.
 
 ## 11. Contributing
 
-- Create one branch per task: `git checkout -b task/<task-name>`
 - Commit with clear messages
-- Open a Pull Request with 1 reviewer
-- Do not push directly to `main`
 - Do not modify env-v1 after the freeze
-
-Daily update format: `Done: ... | Doing next: ... | Blocked by: ...`
 
 ## 12. References
 
