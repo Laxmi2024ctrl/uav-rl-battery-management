@@ -1,3 +1,13 @@
-This is the abstract placeholder.
+Unmanned aerial vehicles (UAVs) are being explored for tasks such as parcel delivery, inspection and wireless coverage~\cite{li2024energy,zhang2026edsac,liu2020distributed}. For battery-powered rotary-wing UAVs, limited endurance remains a major constraint, and the energy drawn in flight depends on factors such as total mass and airspeed~\cite{li2024energy}. Wind adds a further disturbance that the flight controller has to cope with~\cite{ma2024wind}. How the vehicle is flown therefore has to account for both its power demand and the state of its battery.
 
- 
+Analytical and force-based models have been proposed to estimate the propulsion energy of rotary-wing UAVs~\cite{yan2021new,li2024energy}. On the battery side, equivalent-circuit and empirical models have been used to describe the voltage, temperature-related behaviour and discharge of lithium-polymer packs~\cite{suti2022thevenin,dinisio2023battery,agostini2024simplified}.
+
+Reinforcement learning (RL)~\cite{sutton2018rl} learns a control policy through interaction with an environment. It has been applied to UAV navigation, trajectory tracking and wind disturbance rejection~\cite{liu2020distributed,zhang2026edsac,ma2024wind}, as well as to energy management of a fuel cell hybrid UAV~\cite{gao2023healthaware} and to cell balancing in lithium-ion packs~\cite{tavakol2024reinforcement}.
+
+To the best of our knowledge, the studies reviewed here do not jointly address RL-based speed control of a battery-only rotary-wing UAV with a battery model covering state of charge, the Peukert effect, thermal behaviour and degradation, together with a comparison of DQN, PPO, SAC and TD3 in a common environment. This work aims to address this gap. Its main contributions are:
+\begin{itemize}
+  \item A simulation environment that couples a rotary-wing power model, including wind and payload, with the battery model.
+  \item A battery model with state-of-charge tracking, Peukert correction, a 1-RC Thevenin circuit, thermal dynamics, temperature-dependent capacity and degradation stress accumulation.
+  \item A comparison of DQN~\cite{mnih2015dqn}, PPO~\cite{schulman2017ppo}, SAC~\cite{haarnoja2018sac} and TD3~\cite{fujimoto2018td3} against baseline policies under a common evaluation protocol.
+  \item An ablation study on the effect of wind, the temperature model, the energy reward term and the Peukert effect.
+\end{itemize}
